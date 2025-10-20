@@ -1,217 +1,275 @@
-/* Configurações básicas e tipografia */
+/* Configurações Globais e Tipografia Profissional */
 :root {
-    --primary-color: #004d99; /* Azul escuro, ideal para B2B e confiança */
-    --secondary-color: #ff9900; /* Laranja/Amarelo, para destaque */
-    --text-dark: #1f2937;
-    --text-light: #f9fafb;
-    --bg-light: #ffffff;
-    --bg-dark: #001f4d; /* Fundo escuro para a hero-section */
-    --font-family: 'Arial', sans-serif;
+    --color-dark-blue: #0f1c2c; /* Cor principal: seriedade */
+    --color-green-accent: #1abc9c; /* Cor de destaque: solução/ação */
+    --color-text: #333;
+    --color-light-bg: #f4f7f6;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text-dark);
-    background-color: #f4f7f9;
+    color: var(--color-text);
+    background-color: var(--color-light-bg);
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
-/* 1. HERO SECTION (Mais importante para o visual) */
-.hero-section {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    padding: 60px 0 100px 0;
-    text-align: center;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px;
+/* Cabeçalho e Logo */
+.main-header {
+    background-color: var(--color-dark-blue);
+    color: #fff;
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--text-light);
-    text-decoration: none;
-}
-
-.cta-header {
-    background-color: transparent;
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-header:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-dark);
-}
-
-.hero-content h1 {
-    font-size: 2.8em;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero-content .subtitle {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    opacity: 0.85;
-}
-
-.cta-main-button {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--bg-dark);
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    font-size: 1.1em;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
-}
-
-.cta-main-button:hover {
-    background-color: #ffb84d; /* Tom mais claro do secondary */
-    transform: translateY(-2px);
-}
-
-.trust-bar {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.trust-bar .logos span {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 0.9em;
-    opacity: 0.6;
-}
-
-/* 2. BENEFIT CARDS SECTION */
-.section-benefits {
-    padding: 80px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
     text-align: center;
-    background-color: var(--bg-light);
+    margin: 0;
 }
 
-.section-benefits h2 {
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 50px;
+.logo-tagline {
+    font-size: 0.7rem;
+    font-weight: 500;
+    display: block;
+    opacity: 0.7;
+    margin-top: 2px;
 }
 
-.benefit-cards {
+/* Seção Principal (Hero - index.html) */
+.hero-section {
+    padding: 4rem 0 6rem;
+    text-align: center;
+}
+
+.tagline-secret {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-green-accent);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.sub-headline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0.5rem auto 2.5rem;
+    color: #555;
+}
+
+/* Indicadores de Risco/Valor */
+.risk-indicators {
     display: flex;
+    justify-content: center;
     gap: 30px;
-    justify-content: space-between;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-.card {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 30px;
+.indicator {
+    padding: 15px 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 200px;
+}
+
+.indicator .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.indicator p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin: 0;
+}
+
+/* Formulário Persuasivo */
+.cta-form-intro {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.lead-form {
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border-top: 4px solid var(--primary-color);
-}
-
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.3em;
-}
-
-/* 3. FORM SECTION */
-.section-form {
-    background-color: var(--primary-color);
-    padding: 60px 0;
-    color: var(--text-light);
-}
-
-.form-box {
-    background-color: #ffffff;
-    color: var(--text-dark);
-    padding: 40px;
-    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     max-width: 500px;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
-.form-box h2 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.form-box p {
-    margin-bottom: 25px;
-}
-
-.lead-form input, .lead-form select {
+.lead-form input[type="text"],
+.lead-form input[type="email"] {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-.submit-button {
+.lead-form input:focus {
+    border-color: var(--color-dark-blue);
+    outline: none;
+}
+
+.btn.primary-btn {
     width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--bg-dark);
-    padding: 15px;
+    display: block;
+    background-color: var(--color-dark-blue);
+    color: #fff;
+    padding: 1.2rem;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.submit-button:hover {
-    background-color: #ffb84d;
+.btn.primary-btn:hover {
+    background-color: #1a334d;
 }
 
-.privacy-note {
-    font-size: 0.8em;
-    margin-top: 15px;
-    color: #6b7280; /* Um cinza para notas */
-}
-
-
-/* 4. FOOTER */
-.footer {
-    background-color: var(--text-dark);
-    color: #9ca3af;
+.disclaimer-text {
+    font-size: 0.8rem;
+    color: #999;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+    margin-top: 1rem;
 }
 
-.footer a {
-    color: #9ca3af;
-    text-decoration: none;
+/* Rodapé */
+.main-footer {
+    background-color: #0d1a26;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
 }
+
+/* ESTILOS DA PÁGINA DE AGRADECIMENTO (agradecimento.html) */
+
+.thank-you-page {
+    /* Define o layout para centralizar o conteúdo principal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.thank-you-main {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.content-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    max-width: 750px;
+    text-align: center;
+    border-top: 6px solid var(--color-green-accent); /* Linha de destaque */
+}
+
+.icon-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.content-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.content-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.next-steps-section {
+    background-color: var(--color-light-bg);
+    border: 1px solid #ddd;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.next-steps-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark-blue);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.next-steps-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps-section li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+.next-steps-section .list-icon {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-green-accent);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.final-message {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-dark-blue);
+    margin-top: 2rem;
+    font-weight: 500;
+    }
